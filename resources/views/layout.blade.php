@@ -129,7 +129,7 @@
         <div class="footer-copyright">
             <div class="container">
                 Equipe: Diego, Diogo, Georgia | PROINT II
-                <a class="white-text text-lighten-4 right" href="http://github.com/diego380/musicstore">@Github</a>
+                <a class="white-text text-lighten-4 right" href="http://github.com/diego380/cdstore">@Github</a>
             </div>
         </div>
     </footer>
