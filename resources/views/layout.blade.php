@@ -19,7 +19,7 @@
             <div class="nav-wrapper  deep-purple darken-1 row">
                 <a href="{{ route('index') }}" class="brand-logo col offset-l1">
                     
-               <img class="responsive-img" style="width: 300px;" src="/img/LOGO1.png">
+               <img class="responsive-img" style="width: 250px; padding: 10px;" src="/img/LOGO1.png">
                     
                 </a>
                 <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
