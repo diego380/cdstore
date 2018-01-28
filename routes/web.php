@@ -38,7 +38,7 @@ Route::post('/carrinho/desconto', 'CarrinhoController@desconto')->name('carrinho
 
 // ADMIN
 
-Route::group(['prefix' => 'admin'], function () {
+Route::group(['prefix' => 'admin','middleware'=>'admin'], function () {
 
     // PRODUTOS
 
@@ -58,5 +58,7 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('cupons/editar/{id}', 'Admin\CupomDescontoController@editar')->name('admin.cupons.editar');
     Route::put('cupons/atualizar/{id}', 'Admin\CupomDescontoController@atualizar')->name('admin.cupons.atualizar');
     Route::get('cupons/deletar/{id}', 'Admin\CupomDescontoController@deletar')->name('admin.cupons.deletar');
+
+    // VENDAS
 
 });

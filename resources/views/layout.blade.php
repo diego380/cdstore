@@ -52,11 +52,16 @@
                     @else
                         <li>
                             <a class="dropdown-button" href="#!" data-activates="dropdown-user">
-                                Olá {{ Auth::user()->name }}!<i class="material-icons right">arrow_drop_down</i>
+                                Olá <b>{{ Auth::user()->name }}</b>!<i class="material-icons right">arrow_drop_down</i>
                             </a>
                             <ul id="dropdown-user" class="dropdown-content">
                                 <li class="divider"></li>
                                 <li><a href="{{ url('user/'.Auth::id()) }}">Meus dados</a></li>
+                                @if(Auth::user()->admin == 1)
+                                <li><a href="{{ url('admin/produtos') }}">Produtos</a></li>
+                                <li><a href="{{ url('admin/cupons') }}">Cupons</a></li>
+                                <li><a href="{{ url('admin/vendas') }}">Vendas</a></li>
+                                @endif
                                 <li>
                                     <a href="{{ url('/logout') }}"
                                         onclick="event.preventDefault();

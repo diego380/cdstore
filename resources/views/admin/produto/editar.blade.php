@@ -4,7 +4,7 @@
 @section('pagina_conteudo')
 	<div class="container">
 		<div class="row">
-			<h3>Editar produto "{{ $registro->nome }}"</h3>
+			<h3>Editar CD: "{{ $registro->titulo }}"</h3>
 			<form method="POST" action="{{ route('admin.produtos.atualizar', $registro->id) }}">
 				{{ csrf_field() }}
 				{{ method_field('PUT') }}

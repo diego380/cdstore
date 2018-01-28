@@ -13,7 +13,8 @@
 					<tr>
 						<th></th>
 						<th>ID</th>
-						<th>Nome</th>
+						<th>Artista</th>
+						<th>CD</th>
 						<th>Valor</th>
 					</tr>
 				</thead>
@@ -29,7 +30,8 @@
 								</a>
 						</td>
 						<td>{{ $produto->id }}</td>
-						<td>{{ $produto->nome }}</td>
+						<td>{{ $produto->artista }}</td>
+						<td>{{ $produto->titulo }}</td>
 						<td>R$ {{ $produto->valor }}</td>
 					</tr>
 					@endforeach
