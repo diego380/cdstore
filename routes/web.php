@@ -21,6 +21,7 @@ Route::get('/', 'HomeController@index')->name('index');
 
 Route::get('/produto/{id}', 'HomeController@produto')->name('produto');
 Route::get('/estilo/{genero}', 'HomeController@cdsPorGenero');
+Route::get('/busca', 'HomeController@busca');
 
 // CARRINHO
 

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Produto;
 use DB;
+use Illuminate\Support\Facades\Input;
 
 class HomeController extends Controller
 {
@@ -14,7 +15,7 @@ class HomeController extends Controller
             'ativo' => 'S'
             ])->inRandomOrder()->get();
 
-        return view('home.index', compact('registros','atributosGeneros'));
+        return view('home.index', compact('registros'));
     }
 
     public function produto($id = null)
@@ -38,7 +39,17 @@ class HomeController extends Controller
             'genero'=>$genero
         ])->get();
 
-        return view('home.index', compact('registros','atributosGeneros'));
+        return view('home.index', compact('registros'));
+    }
+
+    public function busca()
+    {
+        $categoria = Input::get('categoria');
+        $chave = Input::get('chave');
+
+        $registros = Produto::where($categoria,'like',$chave.'%')->get();
+
+        return view('home.index', compact('registros'));
     }
 
 }

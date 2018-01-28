@@ -57,9 +57,6 @@
                             <ul id="dropdown-user" class="dropdown-content">
                                 <li class="divider"></li>
                                 <li><a href="{{ url('user/'.Auth::id()) }}">Meus dados</a></li>
-                                <li><a href=""></a></li>
-                                <li><a href=""></a></li>
-                                <li><a href=""></a></li>
                                 <li>
                                     <a href="{{ url('/logout') }}"
                                         onclick="event.preventDefault();
@@ -77,8 +74,22 @@
     <main>
         <div class="row">
             <div class="col s12 m3 l2">
-                <div class="section">
-                    <h5 class="orange-text"><b>Estilos Musicais</b></h5>
+
+                <div class="section row">
+                    <form method="get" action="{{ url('busca') }}">
+                        <h6 class="orange-text"><b>Pesquisar</b></h6>
+                        <input type="search" name="chave" value="" placeholder="">
+                        <select name="categoria">
+                            <option>Categoria...</option>
+                            <option value="artista">Artista</option>
+                            <option value="titulo">CD</option>
+                        </select>
+                        <button type="submit" class="btn right deep-purple darken-1"><i class="material-icons left">search</i>Buscar</button>
+                    </form>
+                </div>
+
+                <div class="section row">
+                    <h6 class="orange-text"><b>Estilos Musicais</b></h6>
                     <a href="{{ url('/estilo/Funk') }}">
                         <i class="material-icons left">music_note</i>
                         <p>Funk</p>
