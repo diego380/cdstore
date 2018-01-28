@@ -87,41 +87,95 @@
                         <button type="submit" class="btn right deep-purple darken-1"><i class="material-icons left">search</i>Buscar</button>
                     </form>
                 </div>
-
+                <div class="divider"></div>
                 <div class="section row">
-                    <h6 class="orange-text"><b>Estilos Musicais</b></h6>
-                    <a href="{{ url('/estilo/Funk') }}">
-                        <i class="material-icons left">music_note</i>
-                        <p>Funk</p>
-                    </a>
-                    <a href="{{ url('/estilo/Indie') }}">
-                        <i class="material-icons left">music_note</i>
-                        <p>Indie</p>
-                    </a>
-                    <a href="{{ url('/estilo/MPB') }}">
-                        <i class="material-icons left">music_note</i>
-                        <p>MPB</p>
-                    </a>
-                    <a href="{{ url('/estilo/Pop') }}">
-                        <i class="material-icons left">music_note</i>
-                        <p>Pop</p>
-                    </a>
-                    <a href="{{ url('/estilo/PopRock') }}">
-                        <i class="material-icons left">music_note</i>
-                        <p>PopRock</p>
-                    </a>
-                    <a href="{{ url('/estilo/R&B') }}">
-                        <i class="material-icons left">music_note</i>
-                        <p>R&B</p>
-                    </a>
-                    <a href="{{ url('/estilo/Rap') }}">
-                        <i class="material-icons left">music_note</i>
-                        <p>Rap</p>
-                    </a>
-                    <a href="{{ url('/estilo/Rock') }}">
-                        <i class="material-icons left">music_note</i>
-                        <p>Rock</p>
-                    </a>
+                    <h6 class="orange-text">
+                        <i class="material-icons">queue_music</i><b> Estilos Musicais</b>
+                    </h6>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <h7>
+                                        <a href="{{ url('/estilo/Funk') }}">
+                                        <i class="material-icons left">music_note</i>
+                                        Funk
+                                        </a>
+                                    </h7>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h7>
+                                        <a href="{{ url('/estilo/Indie') }}">
+                                        <i class="material-icons left">music_note</i>
+                                        Indie
+                                        </a>
+                                    </h7>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h7>
+                                        <a href="{{ url('/estilo/MPB') }}">
+                                        <i class="material-icons left">music_note</i>
+                                        MPB
+                                        </a>
+                                    </h7>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h7>
+                                        <a href="{{ url('/estilo/Pop') }}">
+                                        <i class="material-icons left">music_note</i>
+                                        Pop
+                                        </a>
+                                    </h7>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h7>
+                                        <a href="{{ url('/estilo/PopRock') }}">
+                                        <i class="material-icons left">music_note</i>
+                                        PopRock
+                                        </a>
+                                    </h7>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h7>
+                                        <a href="{{ url('/estilo/R&B') }}">
+                                        <i class="material-icons left">music_note</i>
+                                        R&B
+                                        </a>
+                                    </h7>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h7>
+                                        <a href="{{ url('/estilo/Rap') }}">
+                                        <i class="material-icons left">music_note</i>
+                                        Rap
+                                        </a>
+                                    </h7>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h7>
+                                        <a href="{{ url('/estilo/Rock') }}">
+                                        <i class="material-icons left">music_note</i>
+                                        Rock
+                                        </a>
+                                    </h7>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
             <div class="col s12 m9 l10">
