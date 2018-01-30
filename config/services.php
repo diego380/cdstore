@@ -38,7 +38,7 @@ return [
     'facebook' => [
         'client_id' => '205666610010584',         // Your facebook Client ID
         'client_secret' => '3a5d4cb770b532c3084910ec34cb2c44', // Your facebook Client Secret
-        'redirect' => 'http://ddgmusic.dyndns.org/login/facebook/callback',
+        'redirect' => 'http://localhost:8000/login/facebook/callback',
     ],
 
 ];

@@ -37,6 +37,7 @@
                         </a>
                     </li>
                     @if (Auth::guest())
+                        <div class="divider"></div>
                         <li>
                             <a href="{{ url('/login') }}">
                                 <i class="material-icons left">account_circle</i>
@@ -50,19 +51,21 @@
                             </a>
                         </li>
                     @else
-                        <li>
+                        <li class="active">
                             <a class="dropdown-button" href="#!" data-activates="dropdown-user">
                                 Olá <b>{{ Auth::user()->name }}</b>!<i class="material-icons right">arrow_drop_down</i>
                             </a>
                             <ul id="dropdown-user" class="dropdown-content">
                                 <li class="divider"></li>
-                                <li><a href="{{ url('user/'.Auth::id()) }}">Meus dados</a></li>
+                                <li><a href="{{ url('user/edit/'.Auth::id()) }}">Meus dados</a></li>
                                 @if(Auth::user()->admin == 1)
+                                <li><a href="{{ url('admin/user/list') }}">Usuários</a></li>
                                 <li><a href="{{ url('admin/produtos') }}">Produtos</a></li>
                                 <li><a href="{{ url('admin/cupons') }}">Cupons</a></li>
                                 <li><a href="{{ url('admin/vendas') }}">Vendas</a></li>
                                 @endif
-                                <li>
+                                <div class="divider"></div>
+                                <li class="active">
                                     <a href="{{ url('/logout') }}"
                                         onclick="event.preventDefault();
                                                  document.getElementById('logout-form').submit();">
@@ -214,5 +217,7 @@
             $('select').material_select();
         });
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.13/jquery.mask.min.js"></script>
+    <script src="/js/cdstore.js"></script>
 </body>
 </html>

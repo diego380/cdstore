@@ -12,12 +12,18 @@
 */
 
 Auth::routes();
+
 Route::get('login/facebook', 'Auth\LoginController@redirectToProvider');
 Route::get('login/facebook/callback', 'Auth\LoginController@handleProviderCallback'); 
 
 // HOME
 
 Route::get('/', 'HomeController@index')->name('index');
+
+// USERS
+
+Route::get('user/edit/{id}','Auth\UserController@editUser')->name('auth.edit')->middleware('auth');
+Route::put('user/update/{id}','Auth\UserController@updateUser')->name('auth.update')->middleware('auth');
 
 // PRODUTO
 
@@ -42,6 +48,12 @@ Route::post('/carrinho/desconto', 'CarrinhoController@desconto')->name('carrinho
 
 Route::group(['prefix' => 'admin','middleware'=>'admin'], function () {
 
+    // USERS
+
+    Route::get('user/list','Auth\UserController@listUsers')->name('auth.list');
+    Route::get('user/search','Auth\UserController@search')->name('auth.list');
+    Route::get('user/delete/{id}','Auth\UserController@deleteUser')->name('auth.list');
+
     // PRODUTOS
 
     Route::get('produtos', 'Admin\ProdutoController@index')->name('admin.produtos');
@@ -61,6 +73,5 @@ Route::group(['prefix' => 'admin','middleware'=>'admin'], function () {
     Route::put('cupons/atualizar/{id}', 'Admin\CupomDescontoController@atualizar')->name('admin.cupons.atualizar');
     Route::get('cupons/deletar/{id}', 'Admin\CupomDescontoController@deletar')->name('admin.cupons.deletar');
 
-    // VENDAS
 
 });

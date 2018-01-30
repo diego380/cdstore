@@ -7,7 +7,7 @@
     <div class="row">
         <div class="col l6 offset-l3 s12 m10 offset-m2">
 
-            <h4>Login</h4>
+            <h4>Login</h4><br>
             <form method="POST" action="{{ url('/login') }}">
                 {{ csrf_field() }}
 
@@ -24,22 +24,19 @@
                         Entrar
                     </button>
                 </div>
-
-                
-
-                <div class="row">
-                    <a class="" href="{{ url('/password/reset') }}">
-                        Esqueceu sua senha?
-                    </a>
-                </div>
-
             </form>
 
             <div class="row">
                 <a href="{{ url('login/facebook') }}">
-                    <button type="submit" class="btn blue col l8 s12 m8">
+                    <button type="submit" class="btn indigo darken-4 col l8 s12 m8">
                         Facebook
                     </button>
+                </a>
+            </div>
+
+            <div class="row">
+                <a class="" href="{{ url('/password/reset') }}">
+                    Esqueceu sua senha?
                 </a>
             </div>
         </div>

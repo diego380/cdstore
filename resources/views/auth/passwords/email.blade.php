@@ -8,6 +8,7 @@
         <div class="col l6 offset-l3 s12 m10 offset-m2">
 
             <h4>Recuperar senha</h4>
+            <br>
             @if (session('status'))
                 <div class="card-panel green">
                     {{ session('status') }}
@@ -17,7 +18,7 @@
                 {{ csrf_field() }}
 
                 @include('auth._form_email')
-
+                <br>
                 <div class="row">
                     <button type="submit" class="btn blue col l8 s12 m8">
                         Enviar

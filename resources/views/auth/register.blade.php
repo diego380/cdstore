@@ -10,13 +10,8 @@
             <form method="POST" action="{{ url('/register') }}">
                 {{ csrf_field() }}
 
-                <div class="row">
-                    <div class="input-field">
-                        <input id="name" type="text" name="name" value="{{ old('name') }}" class="validate {{ $errors->has('name') ? ' invalid' : '' }}" required autofocus>
-                        <label for="name" data-error="{{ $errors->has('name') ? $errors->first('name') : null }}" >Nome</label>
-                    </div>
-                </div>
-
+                
+                @include('auth._form_dados')
                 @include('auth._form_email')
                 @include('auth._form_password')
                 @include('auth._form_password_confirm')
