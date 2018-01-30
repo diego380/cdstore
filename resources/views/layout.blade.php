@@ -37,7 +37,6 @@
                         </a>
                     </li>
                     @if (Auth::guest())
-                        <div class="divider"></div>
                         <li>
                             <a href="{{ url('/login') }}">
                                 <i class="material-icons left">account_circle</i>
