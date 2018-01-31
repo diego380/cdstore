@@ -14,7 +14,7 @@ class AdicionarAdminUsers extends Migration
     public function up()
     {
         Schema::table('users', function($table) {
-            $table->boolean('admin')->default(0);
+            $table->boolean('admin')->default(0)->after('id');
         });
     }
 
@@ -26,7 +26,7 @@ class AdicionarAdminUsers extends Migration
     public function down()
     {
         Schema::table('users', function($table) {
-            $table->boolean('admin')->default(0);
+            $table->boolean('admin');
         });
     }
 }

@@ -14,10 +14,10 @@ class AddCpfDataNascimentoSobrenomeTelefone extends Migration
     public function up()
     {
         Schema::table('users', function($table) {
-            $table->string('cpf')->after('id');
-            $table->string('last_name')->after('name');
-            $table->date('data_nascimento')->after('last_name');
-            $table->string('telefone_contato')->after('data_nascimento');
+            $table->string('cpf')->after('id')->unique()->nullable();
+            $table->string('last_name')->after('name')->nullable();
+            $table->date('data_nascimento')->after('last_name')->nullable();
+            $table->string('telefone_contato')->after('data_nascimento')->nullable();
         });
     }
 
